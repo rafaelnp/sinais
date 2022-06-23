@@ -1,3 +1,6 @@
+# Author: Rafael do Nascimento Pereira <rnp@25ghz.net>
+#
+
 
 import numpy as np
 import plotly.graph_objects as go    # for data visualisation
