@@ -131,3 +131,22 @@ class sinais:
         fig.add_scatter(x=time, y=mov_avg)
         fig.show()
 
+    def save_fxp(signal, format='fxp-s16/15', fname='./signal_fp.txt'):
+        """
+        Save data in the given format using Fxp math
+
+        Parameters
+        ----------
+        signal: NDArray
+
+        Returns
+        -------
+        None
+        """
+
+        n_fxp = Fxp(signal, dtype=format)
+
+        with open(fname, 'w') as f:
+            for fp in n_fxp:
+                f.write(str(fp.bin(frac_dot=False)))
+                f.write('\n')
