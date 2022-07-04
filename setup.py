@@ -22,7 +22,7 @@ setup(
         "Programming Language :: Python :: 3.10",
     ],
     packages=find_packages(where="sinais"),
-
+    license="GPL-3",
     python_requires=">=3.8",
 
     install_requires = [
