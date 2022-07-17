@@ -3,12 +3,19 @@
 
 ###############################################################################
 
+import sys
 from setuptools import setup, find_packages
+
+def check_python_version():
+    if sys.version_info[:2] < (3, 8):
+        print('Python 3.8 or newer is required. Python version detected: {}'.format(sys.version_info))
+        sys.exit(-1)
+
 
 setup(
     name="sinais",
-    version="0.0.1",
-    description="Generate signals for signal processing quite easily using python.",
+    version="0.0.2",
+    description="Easy generation of signals for signal processing using python.",
     author="Rafael do Nascimento Pereira",
     author_email="rnp@25ghz.net",
     url="https://github.com/rafaelnp/sinais",
@@ -21,6 +28,7 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
     ],
+     package_dir={"":"sinais"},
     packages=find_packages(where="sinais"),
     license="GPL-3",
     python_requires=">=3.8",
@@ -33,5 +41,4 @@ setup(
     extras_requires = [
         "pytest==6.2.4",
     ],
-    py_modules=["sinais"],
 )

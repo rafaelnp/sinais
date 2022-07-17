@@ -4,7 +4,7 @@
 from fxpmath import Fxp
 import numpy as np
 import plotly.graph_objects as go    # for data visualisation
-import plotly.io as pio              # to set shahin plot layout
+#import plotly.io as pio              # to set shahin plot layout
 
 
 def gen_sinewave(freq=100, samp_rate=5000, plot=False, save=False):
@@ -162,6 +162,7 @@ def load_fxp(signal, format='fxp-s16/15', fname='./signal_fp.txt'):
     with open(fname, 'r') as f:
         for i in f:
             print(str(fp.bin(frac_dot=True)))
-            f.read(str(fp.bin(frac_dot=True)))
+#            f.read(str(fp.bin(frac_dot=True)))
 
     return fp
+
